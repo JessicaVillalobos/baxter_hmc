@@ -1,0 +1,97 @@
+\hypertarget{baxter__hmc__node_8cpp}{}\section{baxter\+\_\+hmc\+\_\+node.\+cpp File Reference}
+\label{baxter__hmc__node_8cpp}\index{baxter\+\_\+hmc\+\_\+node.\+cpp@{baxter\+\_\+hmc\+\_\+node.\+cpp}}
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}math.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+Int32.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+String.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{baxter__hmc__node_8cpp_a8b54e825df8f58599e33fc6c62b1e623}{scenario\+Not} ()\hypertarget{baxter__hmc__node_8cpp_a8b54e825df8f58599e33fc6c62b1e623}{}\label{baxter__hmc__node_8cpp_a8b54e825df8f58599e33fc6c62b1e623}
+
+\begin{DoxyCompactList}\small\item\em Ask for a valid scenario option. \end{DoxyCompactList}\item 
+void \hyperlink{baxter__hmc__node_8cpp_a6f9e5d7298dadaf85cb2500df715790e}{select\+Scenario} ()
+\begin{DoxyCompactList}\small\item\em Give all the options and ask the user to select one. \end{DoxyCompactList}\item 
+void \hyperlink{baxter__hmc__node_8cpp_a6bcf70f0ac5ea18a45427235561b891e}{scenario\+One} ()\hypertarget{baxter__hmc__node_8cpp_a6bcf70f0ac5ea18a45427235561b891e}{}\label{baxter__hmc__node_8cpp_a6bcf70f0ac5ea18a45427235561b891e}
+
+\begin{DoxyCompactList}\small\item\em Do not change the points received before sending them. \end{DoxyCompactList}\item 
+int \hyperlink{baxter__hmc__node_8cpp_aa8054b2caffa90be48fe4004c24136cf}{scenario\+Two} (int wrong)
+\item 
+void \hyperlink{baxter__hmc__node_8cpp_abd32c85307906688c66713853bd6a7b3}{scenario\+Four} ()\hypertarget{baxter__hmc__node_8cpp_abd32c85307906688c66713853bd6a7b3}{}\label{baxter__hmc__node_8cpp_abd32c85307906688c66713853bd6a7b3}
+
+\begin{DoxyCompactList}\small\item\em Always send random positions. \end{DoxyCompactList}\item 
+void \hyperlink{baxter__hmc__node_8cpp_a32ce1cfb798d2ca6c6f631c538990c4c}{baxter\+Callback} (const std\+\_\+msgs\+::\+String\+::\+Const\+Ptr \&msg1)
+\item 
+int \hyperlink{baxter__hmc__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Publisher {\bfseries pub}\hypertarget{baxter__hmc__node_8cpp_a350594df3e8f6948c8462edfd41ce086}{}\label{baxter__hmc__node_8cpp_a350594df3e8f6948c8462edfd41ce086}
+
+\item 
+std\+\_\+msgs\+::\+Int32 {\bfseries num}\hypertarget{baxter__hmc__node_8cpp_a7e00c3153b1910d0e5b2231d3c877b4f}{}\label{baxter__hmc__node_8cpp_a7e00c3153b1910d0e5b2231d3c877b4f}
+
+\item 
+string {\bfseries point}\hypertarget{baxter__hmc__node_8cpp_a0156c37fe71e2ca6be84d82af349fc01}{}\label{baxter__hmc__node_8cpp_a0156c37fe71e2ca6be84d82af349fc01}
+
+\item 
+string {\bfseries scenario} = \char`\"{}0\char`\"{}\hypertarget{baxter__hmc__node_8cpp_a1f22d95c80e75579e72998952c5651ff}{}\label{baxter__hmc__node_8cpp_a1f22d95c80e75579e72998952c5651ff}
+
+\item 
+int {\bfseries loop} = 0\hypertarget{baxter__hmc__node_8cpp_ad667f040f2932c8097435492fbd10d76}{}\label{baxter__hmc__node_8cpp_ad667f040f2932c8097435492fbd10d76}
+
+\item 
+int {\bfseries send\+Point} = -\/1\hypertarget{baxter__hmc__node_8cpp_adf51efd321804ebf67495ff874a5bb91}{}\label{baxter__hmc__node_8cpp_adf51efd321804ebf67495ff874a5bb91}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{baxter\+\_\+hmc\+\_\+node.\+cpp@{baxter\+\_\+hmc\+\_\+node.\+cpp}!baxter\+Callback@{baxter\+Callback}}
+\index{baxter\+Callback@{baxter\+Callback}!baxter\+\_\+hmc\+\_\+node.\+cpp@{baxter\+\_\+hmc\+\_\+node.\+cpp}}
+\subsubsection[{\texorpdfstring{baxter\+Callback(const std\+\_\+msgs\+::\+String\+::\+Const\+Ptr \&msg1)}{baxterCallback(const std_msgs::String::ConstPtr &msg1)}}]{\setlength{\rightskip}{0pt plus 5cm}void baxter\+Callback (
+\begin{DoxyParamCaption}
+\item[{const std\+\_\+msgs\+::\+String\+::\+Const\+Ptr \&}]{msg1}
+\end{DoxyParamCaption}
+)}\hypertarget{baxter__hmc__node_8cpp_a32ce1cfb798d2ca6c6f631c538990c4c}{}\label{baxter__hmc__node_8cpp_a32ce1cfb798d2ca6c6f631c538990c4c}
+Print the gesture\textquotesingle{}s information from the H\+M\+P\+\_\+detector
+
+Send the information to the code that moves the Baxter -\/1 means wrong command
+
+Execute the code of the chosen scenario
+
+Ask the user to select another option after all the executions of a scenario \index{baxter\+\_\+hmc\+\_\+node.\+cpp@{baxter\+\_\+hmc\+\_\+node.\+cpp}!main@{main}}
+\index{main@{main}!baxter\+\_\+hmc\+\_\+node.\+cpp@{baxter\+\_\+hmc\+\_\+node.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{baxter__hmc__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{baxter__hmc__node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+Initialized the node, setup the Node\+Handle for handling the communication with the R\+OS system
+
+Define the subscriber to the person\textquotesingle{}s gesture
+
+Define the publisher to send the desired robot\textquotesingle{}s gesture \index{baxter\+\_\+hmc\+\_\+node.\+cpp@{baxter\+\_\+hmc\+\_\+node.\+cpp}!scenario\+Two@{scenario\+Two}}
+\index{scenario\+Two@{scenario\+Two}!baxter\+\_\+hmc\+\_\+node.\+cpp@{baxter\+\_\+hmc\+\_\+node.\+cpp}}
+\subsubsection[{\texorpdfstring{scenario\+Two(int wrong)}{scenarioTwo(int wrong)}}]{\setlength{\rightskip}{0pt plus 5cm}int scenario\+Two (
+\begin{DoxyParamCaption}
+\item[{int}]{wrong}
+\end{DoxyParamCaption}
+)}\hypertarget{baxter__hmc__node_8cpp_aa8054b2caffa90be48fe4004c24136cf}{}\label{baxter__hmc__node_8cpp_aa8054b2caffa90be48fe4004c24136cf}
+Change the points received for random positions during the first 3 or 5 loops (scenarios 2 and 3) \index{baxter\+\_\+hmc\+\_\+node.\+cpp@{baxter\+\_\+hmc\+\_\+node.\+cpp}!select\+Scenario@{select\+Scenario}}
+\index{select\+Scenario@{select\+Scenario}!baxter\+\_\+hmc\+\_\+node.\+cpp@{baxter\+\_\+hmc\+\_\+node.\+cpp}}
+\subsubsection[{\texorpdfstring{select\+Scenario()}{selectScenario()}}]{\setlength{\rightskip}{0pt plus 5cm}void select\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{baxter__hmc__node_8cpp_a6f9e5d7298dadaf85cb2500df715790e}{}\label{baxter__hmc__node_8cpp_a6f9e5d7298dadaf85cb2500df715790e}
+
+
+Give all the options and ask the user to select one. 
+
+Check if they want to end the program or if something is wrong 
